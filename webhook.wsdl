@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:p1="http://soa.weg.net/74/intelipost/ShipmentOrder" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="ITF_O_A_STATUS_RECEIVING" targetNamespace="http://soa.weg.net/74/intelipost/ShipmentOrder">
+   <wsdl:documentation />
+   <wsp:UsingPolicy wsdl:required="true" />
+   <wsp:Policy wsu:Id="OP_ITF_O_A_STATUS_RECEIVING" />
+   <wsdl:types>
+      <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://soa.weg.net/74/intelipost/ShipmentOrder" targetNamespace="http://soa.weg.net/74/intelipost/ShipmentOrder">
+         <xsd:element name="MTP_STATUS_RECEIVING_R" type="DTP_STATUS_RECEIVING_R" />
+         <xsd:element name="MTP_STATUS_RECEIVING" type="DTP_STATUS_RECEIVING" />
+       <xsd:complexType name="DTP_STATUS_RECEIVING">
+  <xsd:annotation>
+    <xsd:appinfo source="http://sap.com/xi/VersionID">b3714178c41e11ed8fee000003c4209a</xsd:appinfo>
+  </xsd:annotation> 
+  <xsd:sequence>
+  <xsd:element name="root" minOccurs="0">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="history" minOccurs="0">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element type="xsd:string" name="shipment_order_volume_id" minOccurs="0" />
+              <xsd:element type="xsd:string" name="shipment_order_volume_state" minOccurs="0" />
+              <xsd:element type="xsd:string" name="tracking_state" minOccurs="0" />
+              <xsd:element type="xsd:string" name="created" minOccurs="0" />
+              <xsd:element type="xsd:string" name="created_iso" minOccurs="0" />
+              <xsd:element type="xsd:string" name="provider_message" minOccurs="0" />
+              <xsd:element type="xsd:string" name="provider_state" minOccurs="0" />
+              <xsd:element type="xsd:string" name="shipper_provider_state" minOccurs="0" />
+              <xsd:element type="xsd:string" name="esprinter_message" minOccurs="0" />
+              <xsd:element name="shipment_volume_micro_state" minOccurs="0" >
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element type="xsd:string" name="id" minOccurs="0" />
+                    <xsd:element type="xsd:string" name="code" minOccurs="0" />
+                    <xsd:element type="xsd:string" name="default_name" minOccurs="0" />
+                    <xsd:element type="xsd:string" name="i18n_name" minOccurs="0" />
+                    <xsd:element type="xsd:string" name="description" minOccurs="0" />
+                    <xsd:element type="xsd:string" name="shipment_order_volume_state_id" minOccurs="0" />
+                    <xsd:element type="xsd:string" name="shipment_volume_state_source_id" minOccurs="0" />
+                    <xsd:element type="xsd:string" name="name" minOccurs="0" />
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="attachments" minOccurs="0" >
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element type="xsd:string" name="file_name" minOccurs="0" />
+                    <xsd:element type="xsd:string" name="mime_type" minOccurs="0" />
+                    <xsd:element type="xsd:string" name="type" minOccurs="0" />
+                    <xsd:element type="xsd:string" name="processing_status" minOccurs="0" />
+                    <xsd:element name="additional_information" minOccurs="0" >
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element type="xsd:string" name="key1" minOccurs="0" />
+                          <xsd:element type="xsd:string" name="key2" minOccurs="0" />
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element type="xsd:string" name="url" minOccurs="0" />
+                    <xsd:element type="xsd:string" name="created" minOccurs="0" />
+                    <xsd:element type="xsd:string" name="created_iso" minOccurs="0" />
+                    <xsd:element type="xsd:string" name="modified" minOccurs="0" />
+                    <xsd:element type="xsd:string" name="modified_iso" minOccurs="0" />
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element type="xsd:string" name="shipment_order_volume_state_localized" minOccurs="0" />
+              <xsd:element type="xsd:string" name="shipment_order_volume_state_history" minOccurs="0" />
+              <xsd:element type="xsd:string" name="event_date" minOccurs="0" />
+              <xsd:element type="xsd:string" name="event_date_iso" minOccurs="0" />
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="invoice" minOccurs="0">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element type="xsd:string" name="invoice_series" minOccurs="0" />
+              <xsd:element type="xsd:string" name="invoice_number" minOccurs="0" />
+              <xsd:element type="xsd:string" name="invoice_key" minOccurs="0" />
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element type="xsd:string" name="order_number" minOccurs="0" />
+        <xsd:element type="xsd:string" name="sales_order_number" minOccurs="0" />
+        <xsd:element type="xsd:string" name="tracking_code" minOccurs="0" />
+        <xsd:element type="xsd:string" name="volume_number" minOccurs="0" />
+        <xsd:element name="estimated_delivery_date" minOccurs="0" >
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="client" minOccurs="0" >
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element type="xsd:string" name="current" minOccurs="0" />
+                    <xsd:element type="xsd:string" name="current_iso" minOccurs="0" />
+                    <xsd:element type="xsd:string" name="original" minOccurs="0" />
+                    <xsd:element type="xsd:string" name="original_iso" minOccurs="0" />
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="logistic_provider" minOccurs="0" >
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element type="xsd:string" name="current" minOccurs="0" />
+                    <xsd:element type="xsd:string" name="current_iso" minOccurs="0" />
+                    <xsd:element type="xsd:string" name="original" minOccurs="0" />
+                    <xsd:element type="xsd:string" name="original_iso" minOccurs="0" />
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element type="xsd:string" name="tracking_url" minOccurs="0" />
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  </xsd:sequence>						
+</xsd:complexType>
+       
+         <xsd:complexType name="DTP_STATUS_RECEIVING_R">
+            <xsd:annotation>
+               <xsd:appinfo source="http://sap.com/xi/VersionID">6187c824c1b111ed9a91000003c4209a</xsd:appinfo>
+            </xsd:annotation>
+ 
+           </xsd:complexType>
+      </xsd:schema>
+   </wsdl:types>
+   <wsdl:message name="MTP_STATUS_RECEIVING">
+      <wsdl:documentation />
+      <wsdl:part name="MTP_STATUS_RECEIVING" element="p1:MTP_STATUS_RECEIVING" />
+   </wsdl:message>
+   <wsdl:message name="MTP_STATUS_RECEIVING_R">
+      <wsdl:documentation />
+      <wsdl:part name="MTP_STATUS_RECEIVING_R" element="p1:MTP_STATUS_RECEIVING_R" />
+   </wsdl:message>
+   <wsdl:portType name="ITF_O_A_STATUS_RECEIVING">
+      <wsdl:documentation />
+      <wsdl:operation name="ITF_O_A_STATUS_RECEIVING">
+         <wsdl:documentation />
+         <wsp:Policy>
+            <wsp:PolicyReference URI="#OP_ITF_O_A_STATUS_RECEIVING" />
+         </wsp:Policy>
+         <wsdl:input message="p1:MTP_STATUS_RECEIVING" />
+         <wsdl:output message="p1:MTP_STATUS_RECEIVING_R" />
+      </wsdl:operation>
+   </wsdl:portType>
+   <wsdl:binding name="ITF_O_A_STATUS_RECEIVINGBinding" type="p1:ITF_O_A_STATUS_RECEIVING">
+      <soap:binding xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+      <wsdl:operation name="ITF_O_A_STATUS_RECEIVING">
+         <soap:operation xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" soapAction="http://sap.com/xi/WebService/soap1.1" />
+         <wsdl:input>
+            <soap:body xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" use="literal" />
+         </wsdl:input>
+         <wsdl:output>
+            <soap:body xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" use="literal" />
+         </wsdl:output>
+      </wsdl:operation>
+   </wsdl:binding>
+   <wsdl:service name="ITF_O_A_STATUS_RECEIVINGService">
+      <wsdl:port name="ITF_O_A_STATUS_RECEIVINGPort" binding="p1:ITF_O_A_STATUS_RECEIVINGBinding">
+         <soap:address xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" location="http://brjgs919.weg.net:8000/sap/bc/srt/rfc/sap/zco_status_receiving/100/zco_status_receiving/zco_status_receiving" />
+      </wsdl:port>
+   </wsdl:service>
+</wsdl:definitions>
